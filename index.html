@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Perception Study</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Welcome screen -->
+    <div id="screen-welcome" class="screen">
+      <h1>Mal's Rainy Weekend Music Perception Pilot Study</h1>
+      <div id="directions">
+        <p>Thank you for participating in this pilot experiment!</p>
+        <p>You will hear a series of short musical excerpts.</p>
+        <p>You will hear each excerpt twice.</p>
+        <p>
+          The first time, you will be asked to rate how sad or happy the music
+          sounded.
+        </p>
+        <p>
+          The second time, the music will stop abruptly and you will hear a
+          single tone. After hearing the tone, you will be asked how well it
+          fits with the music you just heard.
+        </p>
+        <p>
+          Please use headphones if possible, and make sure your volume is at a
+          comfortable level.
+        </p>
+        <p>
+          <strong>The pilot should take about 3 minutes to complete.</strong> At
+          the end, please click on the button to email me your results. Thanks
+          so so much!
+        </p>
+      </div>
+      <button id="btn-begin">Begin</button>
+    </div>
+
+    <!-- Error screen (invalid/missing sequence parameter) -->
+    <div id="screen-error" class="screen hidden">
+      <h1>Invalid Link</h1>
+      <p>
+        This experiment requires a valid sequence parameter in the URL. Please
+        use the link you were provided.
+      </p>
+    </div>
+
+    <!-- Trial screen -->
+    <div id="screen-trial" class="screen hidden">
+      <p id="trial-counter"></p>
+      <p id="trial-instruction"></p>
+      <div id="playback-status"></div>
+      <audio id="trial-audio" preload="auto"></audio>
+      <div id="rating-container" class="hidden">
+        <div id="rating-bar">
+          <div id="rating-indicator"></div>
+        </div>
+        <div id="rating-labels">
+          <span id="label-left" class="rating-label"></span>
+          <span id="label-right" class="rating-label"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Results screen -->
+    <div id="screen-results" class="screen hidden">
+      <h2>Thank you!</h2>
+      <p>
+        Your responses have been recorded. Please use the link below to email
+        the results.
+      </p>
+      <label for="comments">Comments or suggestions?</label>
+      <textarea id="comments" rows="4" maxlength="500"></textarea>
+      <a id="mailto-link" href="#">Email me the results</a>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

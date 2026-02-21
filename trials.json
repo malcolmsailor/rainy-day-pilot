@@ -1,0 +1,66 @@
+{
+  "A": [
+    {
+      "trial_id": "probe6_tonicization",
+      "complete_audio": "5c3b79b0.mp3",
+      "probe_audio": "87d7d01c.mp3"
+    },
+    {
+      "trial_id": "probe5_modulation",
+      "complete_audio": "ee2b728e.mp3",
+      "probe_audio": "888ddbfc.mp3"
+    },
+    {
+      "trial_id": "probe4_tonicization",
+      "complete_audio": "155db229.mp3",
+      "probe_audio": "24e5dc31.mp3"
+    },
+    {
+      "trial_id": "probe2_modulation",
+      "complete_audio": "71ba9c46.mp3",
+      "probe_audio": "cfa90be2.mp3"
+    },
+    {
+      "trial_id": "probe7_tonicization",
+      "complete_audio": "d2c99d8a.mp3",
+      "probe_audio": "d4f32e6a.mp3"
+    },
+    {
+      "trial_id": "probe3_modulation",
+      "complete_audio": "612d3645.mp3",
+      "probe_audio": "8f2eb966.mp3"
+    }
+  ],
+  "B": [
+    {
+      "trial_id": "probe3_tonicization",
+      "complete_audio": "74855b16.mp3",
+      "probe_audio": "576f55fb.mp3"
+    },
+    {
+      "trial_id": "probe4_modulation",
+      "complete_audio": "79f8d604.mp3",
+      "probe_audio": "59c7f6bf.mp3"
+    },
+    {
+      "trial_id": "probe7_tonicization",
+      "complete_audio": "d2c99d8a.mp3",
+      "probe_audio": "d4f32e6a.mp3"
+    },
+    {
+      "trial_id": "probe2_tonicization",
+      "complete_audio": "a6577a9f.mp3",
+      "probe_audio": "025c3665.mp3"
+    },
+    {
+      "trial_id": "probe5_tonicization",
+      "complete_audio": "219c5240.mp3",
+      "probe_audio": "8d3f106e.mp3"
+    },
+    {
+      "trial_id": "probe6_tonicization",
+      "complete_audio": "5c3b79b0.mp3",
+      "probe_audio": "87d7d01c.mp3"
+    }
+  ]
+}
