@@ -319,11 +319,17 @@ function showResults(state) {
 
   copyLink.addEventListener("click", (e) => {
     e.preventDefault();
-    const data = getResultsData();
-    navigator.clipboard.writeText(JSON.stringify(data, null, 2)).then(() => {
-      copyConfirmation.classList.remove("hidden");
-      setTimeout(() => copyConfirmation.classList.add("hidden"), 3000);
-    });
+    const text = JSON.stringify(getResultsData(), null, 2);
+    const textarea = document.createElement("textarea");
+    textarea.value = text;
+    textarea.style.position = "fixed";
+    textarea.style.opacity = "0";
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    document.body.removeChild(textarea);
+    copyConfirmation.classList.remove("hidden");
+    setTimeout(() => copyConfirmation.classList.add("hidden"), 3000);
   });
 
   commentsEl.addEventListener("input", updateMailto);
