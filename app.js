@@ -312,7 +312,7 @@ function showResults(state) {
 
   const updateMailto = () => {
     const data = getResultsData();
-    const subject = encodeURIComponent("Tonicization Experiment Results");
+    const subject = encodeURIComponent("Experiment Results");
     const body = encodeURIComponent(JSON.stringify(data, null, 2));
     mailtoLink.href = `mailto:${EMAIL}?subject=${subject}&body=${body}`;
   };
