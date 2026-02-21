@@ -298,19 +298,33 @@ function showResults(state) {
 
   const commentsEl = document.getElementById("comments");
   const mailtoLink = document.getElementById("mailto-link");
+  const copyLink = document.getElementById("copy-link");
+  const copyConfirmation = document.getElementById("copy-confirmation");
 
-  const updateMailto = () => {
-    const data = {
+  function getResultsData() {
+    return {
       sequence: state.sequence,
       timestamp: new Date().toISOString(),
       trials: state.results,
       comments: commentsEl.value,
     };
+  }
 
+  const updateMailto = () => {
+    const data = getResultsData();
     const subject = encodeURIComponent("Tonicization Experiment Results");
     const body = encodeURIComponent(JSON.stringify(data, null, 2));
     mailtoLink.href = `mailto:${EMAIL}?subject=${subject}&body=${body}`;
   };
+
+  copyLink.addEventListener("click", (e) => {
+    e.preventDefault();
+    const data = getResultsData();
+    navigator.clipboard.writeText(JSON.stringify(data, null, 2)).then(() => {
+      copyConfirmation.classList.remove("hidden");
+      setTimeout(() => copyConfirmation.classList.add("hidden"), 3000);
+    });
+  });
 
   commentsEl.addEventListener("input", updateMailto);
   updateMailto();

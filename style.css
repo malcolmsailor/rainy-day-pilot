@@ -139,3 +139,20 @@ label[for="comments"] {
 #mailto-link:hover {
   background: #555;
 }
+
+#copy-fallback {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+#copy-fallback a {
+  color: #444;
+}
+
+#copy-confirmation {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #2a7d2a;
+  font-weight: bold;
+}
