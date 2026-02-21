@@ -300,6 +300,7 @@ function showResults(state) {
   const mailtoLink = document.getElementById("mailto-link");
   const copyLink = document.getElementById("copy-link");
   const copyConfirmation = document.getElementById("copy-confirmation");
+  const resultsText = document.getElementById("results-text");
 
   function getResultsData() {
     return {
@@ -310,12 +311,14 @@ function showResults(state) {
     };
   }
 
-  const updateMailto = () => {
+  function updateAll() {
     const data = getResultsData();
+    const json = JSON.stringify(data, null, 2);
     const subject = encodeURIComponent("Experiment Results");
-    const body = encodeURIComponent(JSON.stringify(data, null, 2));
+    const body = encodeURIComponent(json);
     mailtoLink.href = `mailto:${EMAIL}?subject=${subject}&body=${body}`;
-  };
+    resultsText.value = json;
+  }
 
   copyLink.addEventListener("click", (e) => {
     e.preventDefault();
@@ -332,6 +335,6 @@ function showResults(state) {
     setTimeout(() => copyConfirmation.classList.add("hidden"), 3000);
   });
 
-  commentsEl.addEventListener("input", updateMailto);
-  updateMailto();
+  commentsEl.addEventListener("input", updateAll);
+  updateAll();
 }

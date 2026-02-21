@@ -156,3 +156,25 @@ label[for="comments"] {
   color: #2a7d2a;
   font-weight: bold;
 }
+
+#manual-copy-fallback {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+#manual-copy-fallback summary {
+  cursor: pointer;
+}
+
+#results-text {
+  display: block;
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  font-family: monospace;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #f5f5f5;
+}
